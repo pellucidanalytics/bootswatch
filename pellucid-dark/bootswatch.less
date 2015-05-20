@@ -836,8 +836,60 @@ a.list-group-item {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
+.modal {
+  color: @gray;
+
+  // get rid of the very bootstrap-y slide effect
+  // and center modal both vertically and horizontally
+  &.fade .modal-dialog {
+    left: 50%;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    .translate(-50%, -50%);
+    .transition-transform(~"none");
+  }
+  &.in .modal-dialog {
+    left: 50%;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    .translate(-50%, -50%);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: @gray;
+  }
+
+  .close {
+    color: @gray;
+    text-shadow: none;
+  }
+
+  .btn-default {
+    background-color: @gray;
+    border-color: @gray;
+
+    &:hover {
+      background-color: darken(@gray, 10%);
+      border-color: darken(@gray, 10%);
+    }
+  }
+
+  .modal-header,
+  .modal-body,
+  .modal-footer {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .modal-footer {
+    padding-top: 0;
+  }
+}
+
 .modal-header {
-  background-color: darken(@gray-darker,5%);
+  background-color: darken(@gray-lighter, 5%);
 }
 
 // Wells =====================================================================
