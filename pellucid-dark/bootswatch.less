@@ -627,30 +627,23 @@ select[size] {
   margin: 20px 0px;
 }
 
-// Comps groups
+// Comps groups madness
 
 .container-compsGroups {
 
-  [data-schemapath="root.entities.compsGroups.0"],
-  [data-schemapath="root.entities.compsGroups.1"],
-  [data-schemapath="root.entities.compsGroups.2"],
-  [data-schemapath="root.entities.compsGroups.3"],
-  [data-schemapath="root.entities.compsGroups.4"],
-  [data-schemapath="root.entities.compsGroups.5"], {
-    border-bottom: 0px solid @gray-dark;
-    border-top: 1px solid @gray-dark;
-
-    .btn-group {
-      button.btn.btn-default.json-editor-btn-delete.delete,
-      button.btn.btn-default.json-editor-btn-moveup.moveup,
-      button.btn.btn-default.json-editor-btn-movedown.movedown {
-        font-size: 10px;
-        background-color: #222228;
-        height: 36px;
-        width: 10px;
-        vertical-align: middle;
-      }
+  [data-schemapath^="root.entities.compsGroups"] {
+    button.btn.btn-default.json-editor-btn-add {
+      margin-left: 15px;
     }
+  }
+
+  [data-schematype="array"] .table > thead > tr > th,
+  [data-schematype="array"] .table > tbody > tr > th,
+  [data-schematype="array"] .table > tfoot > tr > th,
+  [data-schematype="array"] .table > thead > tr > td,
+  [data-schematype="array"] .table > tbody > tr > td,
+  [data-schematype="array"] .table > tfoot > tr > td {
+    padding: 0px 0px 15px 15px;
   }
 
   [data-schematype="array"] table.table.table-bordered {
@@ -665,10 +658,12 @@ select[size] {
   table .table .table-bordered {
     width: 100% !important;
     max-width: 100% !important;
+    margin-bottom: 0px;
+    margin-top: 10px;
   }
 
   .table td:first-child {
-    width: 70%;
+    width: 60%;
   }
 
   .table td{
@@ -676,20 +671,42 @@ select[size] {
   }
 
   .table td:nth-child(3) {
-    width: 20%;
+    width: 32px;
+
+    .btn-group {
+      button.btn.btn-default.json-editor-btn-delete.delete,
+      button.btn.btn-default.json-editor-btn-moveup.moveup,
+      button.btn.btn-default.json-editor-btn-movedown.movedown {
+        background: none;
+        height: 30px;
+        vertical-align: middle;
+        border: 0px solid @gray-dark2;
+        font-size: 12px;
+        color: @gray;
+      }
+    }
   }
 
   @media screen and (max-width: 1200px) {
     .table td:first-child {
-    width: 50%;
+      width: 45%;
     }
   }
 
   [data-schematype="array"] {
-    //border: 1px solid @gray-dark;
-    //padding: 15px;
-    //margin: 15px;
-    //background-color: lighten(@gray-darker,2%);
+    border: 1px solid @gray-dark2;
+    padding: 15px;
+    margin: 15px;
+    border-radius: 2px;
+  }
+
+  .form-group {
+    margin-bottom: 0px;
+  }
+
+  [data-schematype="array"] thead {
+  display: none;
+  margin-top: 10px;
   }
 }
 
