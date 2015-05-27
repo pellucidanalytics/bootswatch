@@ -7262,6 +7262,10 @@ select[size] {
   color: #f1f1f1;
   text-decoration: none;
 }
+.breadcrumb > li + li:before {
+  content: "/";
+  padding: 0 10px;
+}
 .nav-tabs a,
 .nav-pills a {
   color: #f1f1f1;

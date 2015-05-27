@@ -260,11 +260,11 @@ td.order-line-expand {
   margin-bottom: 10px;
 }
 
-.table>thead>tr>th, 
-.table>tbody>tr>th, 
-.table>tfoot>tr>th, 
-.table>thead>tr>td, 
-.table>tbody>tr>td, 
+.table>thead>tr>th,
+.table>tbody>tr>th,
+.table>tfoot>tr>th,
+.table>thead>tr>td,
+.table>tbody>tr>td,
 .table>tfoot>tr>td {
   padding: 10px;
 }
@@ -285,11 +285,11 @@ tr.body {
   .table {
     border-bottom: 1px solid @gray-dark2;
   }
-  .table>thead>tr>th, 
-  .table>tbody>tr>th, 
-  .table>tfoot>tr>th, 
-  .table>thead>tr>td, 
-  .table>tbody>tr>td, 
+  .table>thead>tr>th,
+  .table>tbody>tr>th,
+  .table>tfoot>tr>th,
+  .table>thead>tr>td,
+  .table>tbody>tr>td,
   .table>tfoot>tr>td {
     padding: 10px 15px;
   }
@@ -550,7 +550,7 @@ select[size] {
   font-size: 14px;
   line-height: 14px;
   padding-bottom: 0px;
-} 
+}
 
 .container-customEndDate label.control-label {
   display: none;
@@ -794,6 +794,13 @@ select[size] {
   a:hover {
     color: @white;
     text-decoration: none;
+  }
+
+  > li + li {
+    &:before {
+      content: "/";
+      padding: 0 10px;
+    }
   }
 }
 
