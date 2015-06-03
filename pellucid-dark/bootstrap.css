@@ -7079,7 +7079,7 @@ select[size] {
   padding-bottom: 5px;
 }
 .container-duration > label:after {
-  content: "Provided with latest available data unless custom date range is specified";
+  content: "Provided with latest available data unless custom duration is specified";
   color: #878690;
   display: block;
   font-family: "Gibson", "Helvetica Neue", Helvetica, Arial, sans-serif;
