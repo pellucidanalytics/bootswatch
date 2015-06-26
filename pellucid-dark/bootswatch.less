@@ -277,6 +277,7 @@ tr.body {
   transition: all .2s;
 }
 
+// TODO: application-specific styles should not be here
 .orders-page,
 .order-page {
   .table > thead > tr > th {
@@ -294,7 +295,6 @@ tr.body {
     padding: 10px 15px;
   }
 }
-
 
 // Forms ======================================================================
 
@@ -352,20 +352,20 @@ fieldset[disabled] .form-control {
   opacity: .25;
 }
 
-  .form-custom .control-label {
-    display: block;
-    text-align: right;
-    margin-bottom: 0;
-    padding-top: 9px;
-  }
+.form-custom .control-label {
+  display: block;
+  text-align: right;
+  margin-bottom: 0;
+  padding-top: 9px;
+}
 
-  .form-custom .control-label:first-letter {
+.form-custom .control-label:first-letter {
   text-transform: capitalize;
-  }
+}
 
-  input .form-custom{
-    display: block;
-  }
+input .form-custom{
+  display: block;
+}
 
 .has-warning {
   .help-block,
@@ -467,10 +467,13 @@ select {
 
 // Checkbox =========================================================
 
-input[type=checkbox] { display:none; } /* hide default checkbox */
+// TODO: we probably don't want to hide all checkboxes by default - probably want to use a
+// class or parent selecgtor for this
+input[type=checkbox] {
+  display:none;
+}
 
 .custom-checkbox {
-
   label {
     padding-left: 0px;
     vertical-align: middle;
@@ -766,18 +769,13 @@ select[size] {
 // Button groups
 
 .btn-group {
-
   .json-editor-btn-add {
-
     .fa-plus:before {
       font-size: 14px;
       margin-right: 5px;
     }
-
   }
-
 }
-
 
 // Navs =======================================================================
 
@@ -913,6 +911,7 @@ select[size] {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
+
 .progress .progress-bar {
   font-size: 10px;
   line-height: 10px;
@@ -1262,58 +1261,58 @@ a.no-underline {
 
 // Select2
 
-  .select2-dropdown {
-    background-color: lighten(@gray-darker,2%) !important;
-    border: 1px solid @gray-dark !important;
-    border-radius: 2px !important;
-    color: @gray-lighter;
-  }
+.select2-dropdown {
+  background-color: lighten(@gray-darker,2%) !important;
+  border: 1px solid @gray-dark !important;
+  border-radius: 2px !important;
+  color: @gray-lighter;
+}
 
-  .select2-container--default .select2-search--dropdown .select2-search__field {
-    border: 1px solid @gray-dark !important;
-    background-color: @white !important;
-    color: @gray-darker !important;
-  }
+.select2-container--default .select2-search--dropdown .select2-search__field {
+  border: 1px solid @gray-dark !important;
+  background-color: @white !important;
+  color: @gray-darker !important;
+}
 
-  .select2-container--default .select2-results__option--highlighted[aria-selected] {
-    background-color: darken(@gray-darker, 5%) !important;
-    color: @white !important;
-  }
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+  background-color: darken(@gray-darker, 5%) !important;
+  color: @white !important;
+}
 
-  .select2-container--default .select2-results__option[aria-selected=true] {
-    background-color: lighten(@gray-darker,2%) !important;
-    color: fade(@white, 25%) !important;
-  }
+.select2-container--default .select2-results__option[aria-selected=true] {
+  background-color: lighten(@gray-darker,2%) !important;
+  color: fade(@white, 25%) !important;
+}
 
-  .select2-container--default .select2-selection--single .select2-selection__rendered {
-    background-color: lighten(@gray-darker,2%) !important;
-    border: 1px solid @gray-dark !important;
-    border-radius: 2px !important;
-    color: @gray-lighter !important;
-    line-height: 36px !important;
-  }
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  background-color: lighten(@gray-darker,2%) !important;
+  border: 1px solid @gray-dark !important;
+  border-radius: 2px !important;
+  color: @gray-lighter !important;
+  line-height: 36px !important;
+}
 
-  .select2-container--default .select2-selection--single {
-    background-color: lighten(@gray-darker,2%) !important;
-    border: 0px solid @gray-dark !important;
-    border-radius: 2px !important;
-  }
+.select2-container--default .select2-selection--single {
+  background-color: lighten(@gray-darker,2%) !important;
+  border: 0px solid @gray-dark !important;
+  border-radius: 2px !important;
+}
 
-  .select2-container--default .select2-selection--single .select2-selection__arrow {
-    height: 36px !important;
-    right: 6px !important;
-  }
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+  height: 36px !important;
+  right: 6px !important;
+}
 
-  .select2-container .select2-selection--single {
-    box-sizing: border-box;
-    cursor: pointer;
-    display: block;
-    height: 36px !important;
-  }
+.select2-container .select2-selection--single {
+  box-sizing: border-box;
+  cursor: pointer;
+  display: block;
+  height: 36px !important;
+}
 
-  .select2-container .select2-selection--single .select2-selection__rendered {
-    height: 36px;
-  }
+.select2-container .select2-selection--single .select2-selection__rendered {
+  height: 36px;
+}
 
 // Checkout Panels =====================================================================
 
@@ -1321,30 +1320,36 @@ a.no-underline {
   background-color: lighten(@gray-darker,2%);
 }
 
+// TODO: appliation-specific styles should probably not be in here
 tr.order-line-details.expanded {
   background-color: lighten(@gray-darker,2%);
 }
 
+// TODO: appliation-specific styles should probably not be in here
 .panel-default .product-name a {
   text-decoration: none;
   color: @gray-light;
 }
 
+// TODO: appliation-specific styles should probably not be in here
 .panel-default .product-name a:hover {
   text-decoration: none;
   color: @white;
 }
 
+// TODO: appliation-specific styles should probably not be in here
 .expand-order-line .fa {
   color: @gray;
 }
 
+// TODO: appliation-specific styles should probably not be in here
 .expand-order-line .fa:hover {
   color: @white;
 }
 
 // Checkout area
 
+// TODO: appliation-specific styles should probably not be in here
 .container-order-info {
 
   .row-order-summary .panel-default {
@@ -1366,23 +1371,9 @@ tr.order-line-details.expanded {
 
 }
 
-// Change Password  =====================================================================
-
-.change-password {
-
-  .form-control {
-    width: 300px !important;
-  }
-
-  button.btn.btn-primary.btn.btn-block {
-    width: inherit;
-  }
-
-}
-
 // Lightbox =====================================================================
 
- #imagelightbox-close {
+#imagelightbox-close {
   background-color: rgba(225, 225, 225, 0);
   background-color: none;
 }
@@ -1443,6 +1434,7 @@ tr.order-line-details.expanded {
 
 // Product image
 
+// TODO: app-specific styles should not be in here
 .product-page .product-page-left {
 
   .carousel img {
@@ -1460,7 +1452,6 @@ tr.order-line-details.expanded {
 // Password reset
 
 .login-block {
-
   i.fa.fa-lock.password-reset,
   i.fa.fa-unlock-alt.password-reset {
     font-size: 50px;
@@ -1470,5 +1461,4 @@ tr.order-line-details.expanded {
     margin-left: auto;
     margin-right: auto;
   }
-
 }
