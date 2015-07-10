@@ -4447,7 +4447,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-default {
-  background-color: #000000;
+  background-color: #333338;
   border-color: #444448;
 }
 .navbar-default .navbar-brand {
@@ -6675,10 +6675,8 @@ button.close {
   background-color: #d14836;
 }
 .navbar {
-  border-color: #444448;
-  border-style: solid;
-  border-width: 0px 0px 1px 0px;
-  border-radius: 0px;
+  border: 0;
+  border-radius: 0;
 }
 .navbar-default .navbar-nav > li > a {
   font-family: "Gibson", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
