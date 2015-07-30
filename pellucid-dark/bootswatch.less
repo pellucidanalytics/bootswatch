@@ -86,41 +86,84 @@ a.navbar-brand:hover{
   border: 1px solid @body-bg;
 }
 
-// Navbar User Menu
+// generic dropdown overrides (colors, add triangle caret pointer thing)
 
-.navbar  {
-  .dropdown-menu {
-    top: 80%;
-    z-index: 1030;
-    padding: 10px 0px;
-    margin: 5px;
-    font-size: 14px;
-  }
+.dropdown-menu:before {
+  border: 8px solid transparent;
+  border-bottom-color: @gray-base;
+  content: "";
+  left: 10%;
+  position: absolute;
+  top: -16px;
+}
 
-  .dropdown-menu > li a {
-    color: @gray-lighter;
-  }
+.dropdown-menu-right:before {
+  left: auto;
+  right: 10%;
+}
 
-  .dropdown-menu > li a:hover {
-    background-color: lighten(@gray-base, 10%);
-    color: @white;
-  }
+.dropdown-menu > li a {
+  color: @gray-lighter;
+}
 
-  .dropdown-menu .divider {
+.dropdown-menu > li a:hover {
+  background-color: lighten(@gray-base, 10%);
+  color: @white;
+}
+
+.dropdown-menu .divider {
   background-color: @gray-darker;
+}
+
+
+// a light version of the dropdown menu
+.dropdown-menu-inverse {
+  background-color: #fff;
+
+  &:before {
+    border-bottom-color: #fff;
   }
 
-  .user-menu:hover {
-    color: @white !important;
+  .dropdown-header {
+    padding: 6px 10px;
   }
 
-  .user-menu .caret {
-    margin-left: 6px;
-    border-bottom: 3px solid transparent;
-  }
+  > li {
+    border-bottom: 1px solid @white;
 
-  .cart-link .cart-container:hover {
-  color: @white !important;
+    a {
+      color: @gray;
+      padding: 6px 10px;
+
+      &:hover,
+      &:focus {
+        background-color: transparent;
+        color: @gray-dark;
+      }
+    }
+    ul {
+      background-color: #f8f8f8;
+      border-top: 1px solid @white;
+      list-style: none;
+      padding: 0;
+
+      li {
+        border-top: 1px solid @white;
+
+        a {
+          display: block;
+          padding: 6px 10px 6px 30px;
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
+
+        &:first-child {
+          border-top: 0;
+        }
+      }
+    }
   }
 }
 

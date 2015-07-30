@@ -6703,32 +6703,67 @@ a.navbar-brand:hover {
 .btn-group .btn {
   border: 1px solid #222228;
 }
-.navbar .dropdown-menu {
-  top: 80%;
-  z-index: 1030;
-  padding: 10px 0px;
-  margin: 5px;
-  font-size: 14px;
+.dropdown-menu:before {
+  border: 8px solid transparent;
+  border-bottom-color: #000000;
+  content: "";
+  left: 10%;
+  position: absolute;
+  top: -16px;
 }
-.navbar .dropdown-menu > li a {
+.dropdown-menu-right:before {
+  left: auto;
+  right: 10%;
+}
+.dropdown-menu > li a {
   color: #bdbdc1;
 }
-.navbar .dropdown-menu > li a:hover {
+.dropdown-menu > li a:hover {
   background-color: #1a1a1a;
   color: #f1f1f1;
 }
-.navbar .dropdown-menu .divider {
+.dropdown-menu .divider {
   background-color: #222228;
 }
-.navbar .user-menu:hover {
-  color: #f1f1f1 !important;
+.dropdown-menu-inverse {
+  background-color: #fff;
 }
-.navbar .user-menu .caret {
-  margin-left: 6px;
-  border-bottom: 3px solid transparent;
+.dropdown-menu-inverse:before {
+  border-bottom-color: #fff;
 }
-.navbar .cart-link .cart-container:hover {
-  color: #f1f1f1 !important;
+.dropdown-menu-inverse .dropdown-header {
+  padding: 6px 10px;
+}
+.dropdown-menu-inverse > li {
+  border-bottom: 1px solid #f1f1f1;
+}
+.dropdown-menu-inverse > li a {
+  color: #66656c;
+  padding: 6px 10px;
+}
+.dropdown-menu-inverse > li a:hover,
+.dropdown-menu-inverse > li a:focus {
+  background-color: transparent;
+  color: #444448;
+}
+.dropdown-menu-inverse > li ul {
+  background-color: #f8f8f8;
+  border-top: 1px solid #f1f1f1;
+  list-style: none;
+  padding: 0;
+}
+.dropdown-menu-inverse > li ul li {
+  border-top: 1px solid #f1f1f1;
+}
+.dropdown-menu-inverse > li ul li a {
+  display: block;
+  padding: 6px 10px 6px 30px;
+}
+.dropdown-menu-inverse > li ul li a:hover {
+  text-decoration: none;
+}
+.dropdown-menu-inverse > li ul li:first-child {
+  border-top: 0;
 }
 p {
   line-height: 26px;
