@@ -6727,19 +6727,21 @@ a.navbar-brand:hover {
 }
 .dropdown-menu-inverse {
   background-color: #fff;
+  font-family: "Gibson Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .dropdown-menu-inverse:before {
   border-bottom-color: #fff;
 }
 .dropdown-menu-inverse .dropdown-header {
-  padding: 6px 10px;
+  font: 13px "Gibson", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: 6px 12px;
 }
 .dropdown-menu-inverse > li {
   border-bottom: 1px solid #f1f1f1;
 }
 .dropdown-menu-inverse > li a {
   color: #66656c;
-  padding: 6px 10px;
+  padding: 6px 12px;
 }
 .dropdown-menu-inverse > li a:hover,
 .dropdown-menu-inverse > li a:focus {
@@ -6757,7 +6759,7 @@ a.navbar-brand:hover {
 }
 .dropdown-menu-inverse > li ul li a {
   display: block;
-  padding: 6px 10px 6px 30px;
+  padding: 6px 12px 6px 32px;
 }
 .dropdown-menu-inverse > li ul li a:hover {
   text-decoration: none;

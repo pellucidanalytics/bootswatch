@@ -119,13 +119,15 @@ a.navbar-brand:hover{
 // a light version of the dropdown menu
 .dropdown-menu-inverse {
   background-color: #fff;
+  font-family: @font-family-base;
 
   &:before {
     border-bottom-color: #fff;
   }
 
   .dropdown-header {
-    padding: 6px 10px;
+    font: 13px @font-family-bold;
+    padding: 6px 12px;
   }
 
   > li {
@@ -133,7 +135,7 @@ a.navbar-brand:hover{
 
     a {
       color: @gray;
-      padding: 6px 10px;
+      padding: 6px 12px;
 
       &:hover,
       &:focus {
@@ -152,7 +154,7 @@ a.navbar-brand:hover{
 
         a {
           display: block;
-          padding: 6px 10px 6px 30px;
+          padding: 6px 12px 6px 32px;
 
           &:hover {
             text-decoration: none;
