@@ -6900,6 +6900,9 @@ tr.body {
   transition: border-color ease-in-out 0.25s, box-shadow ease-in-out 0.25s;
   -webkit-appearance: none;
 }
+[data-schemaid=root] textarea.form-control {
+  height: 108px !important;
+}
 [data-schemaid=root] .form-control:focus {
   background-color: #222228 !important;
   border-color: #bdbdc1;
