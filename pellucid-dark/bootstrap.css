@@ -7683,37 +7683,6 @@ a.no-underline {
 .panel {
   background-color: #27272e;
 }
-tr.order-line-details.expanded {
-  background-color: #27272e;
-}
-.panel-default .product-name a {
-  text-decoration: none;
-  color: #878690;
-}
-.panel-default .product-name a:hover {
-  text-decoration: none;
-  color: #f1f1f1;
-}
-.expand-order-line .fa {
-  color: #66656c;
-}
-.expand-order-line .fa:hover {
-  color: #f1f1f1;
-}
-.container-order-info .row-order-summary .panel-default {
-  border: none;
-  background-color: #222228;
-}
-.container-order-info .table > tbody > tr > td,
-.container-order-info .table > tfoot > tr > td {
-  border-top: 0px;
-}
-.container-order-info .row-order-form p {
-  font-size: 14px;
-  color: #878690;
-  font-family: "Gibson", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  margin-bottom: 0px;
-}
 #imagelightbox-close {
   background-color: rgba(225, 225, 225, 0);
   background-color: none;
