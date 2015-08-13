@@ -274,7 +274,7 @@ td.order-line-expand {
 .table>thead>tr>td,
 .table>tbody>tr>td,
 .table>tfoot>tr>td {
-  padding: 10px;
+  padding: 10px 15px;
 }
 
 .tabpanel input:hover{
@@ -283,25 +283,6 @@ td.order-line-expand {
 
 tr.body {
   transition: all .2s;
-}
-
-// TODO: application-specific styles should not be here
-.orders-page,
-.order-page {
-  .table > thead > tr > th {
-    border-bottom: 1px solid @gray-dark;
-  }
-  .table {
-    border-bottom: 1px solid @gray-dark2;
-  }
-  .table>thead>tr>th,
-  .table>tbody>tr>th,
-  .table>tfoot>tr>th,
-  .table>thead>tr>td,
-  .table>tbody>tr>td,
-  .table>tfoot>tr>td {
-    padding: 10px 15px;
-  }
 }
 
 // Forms ======================================================================
@@ -484,7 +465,7 @@ select {
 // Checkbox =========================================================
 
 // TODO: we probably don't want to hide all checkboxes by default - probably want to use a
-// class or parent selecgtor for this
+// class or parent selector for this
 input[type=checkbox] {
   display:none;
 }
@@ -1397,23 +1378,8 @@ a.no-underline {
   box-shadow: 0 0 0.125em rgba(0, 0, 0, 0.5);
 }
 
-// Product image
 
 // TODO: app-specific styles should not be in here
-.product-page .product-page-left {
-
-  .carousel img {
-    opacity: 1;
-  }
-
- .carousel img:hover {
-    opacity: .9;
-    transition: opacity .5s ease-in-out;
-    -moz-transition: opacity .5s ease-in-out;
-    -webkit-transition: opacity .5s ease-in-out;
-  }
-}
-
 // Password reset
 
 .login-block {
