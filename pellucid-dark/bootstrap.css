@@ -6823,27 +6823,13 @@ table .text-muted,
 .table .text-muted {
   color: #bdbdc1;
 }
-.table-responsive > .table {
-  background-color: #222228;
-}
-.table > thead > tr > th {
-  color: #66656c;
-  font-size: 12px;
-  font-family: "Gibson", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: normal;
-  text-transform: uppercase;
-  border-bottom: 1px solid #444448;
-}
-td.product-name,
-td.order-line-expand {
-  -webkit-transition: color 0.25s ease-in-out;
-       -o-transition: color 0.25s ease-in-out;
-          transition: color 0.25s ease-in-out;
-}
 .table {
   width: 100%;
   max-width: 100%;
   margin-bottom: 10px;
+}
+.table-responsive > .table {
+  background-color: #222228;
 }
 .table > thead > tr > th,
 .table > tbody > tr > th,
@@ -6851,7 +6837,14 @@ td.order-line-expand {
 .table > thead > tr > td,
 .table > tbody > tr > td,
 .table > tfoot > tr > td {
-  padding: 10px 15px;
+  padding: 10px;
+}
+.table > thead > tr > th {
+  color: #66656c;
+  font-size: 13px;
+  font-family: "Gibson", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  border-bottom: 1px solid #444448;
 }
 .tabpanel input:hover {
   color: #f1f1f1;
