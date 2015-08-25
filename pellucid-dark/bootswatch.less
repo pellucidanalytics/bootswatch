@@ -326,20 +326,7 @@ fieldset[disabled] .form-control {
   opacity: .25;
 }
 
-.form-custom .control-label {
-  display: block;
-  text-align: right;
-  margin-bottom: 0;
-  padding-top: 9px;
-}
-
-.form-custom .control-label:first-letter {
-  text-transform: capitalize;
-}
-
-input .form-custom{
-  display: block;
-}
+// these colors are overridden because the default is #fff for form addons
 
 .has-warning {
   .help-block,
@@ -384,7 +371,7 @@ input .form-custom{
 }
 
 .help-block {
-  color: #878690;
+  color: @gray-light;
   font-size: 12px;
   font-style: italic;
 }
