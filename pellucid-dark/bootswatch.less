@@ -15,16 +15,15 @@
 
 .navbar {
   border: 0;
-  border-radius: 0;
 }
 
 .navbar-default .navbar-nav > li > a {
-  font-family: "Gibson", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-family: @font-family-bold !important;
   font-size: 13px;
 }
 
 .navbar-default .navbar-nav > li > a:hover {
-  color: #FFFFFF;
+  color: #fff;
 }
 
 a.navbar-brand {
@@ -45,17 +44,6 @@ a.navbar-brand:hover{
   padding: 6px 12px;
 }
 
-// button.btn.btn-primary.btn-block.add-to-cart {
-//  transition: all 0.3s ease 0s;
-//}
-
-//button.btn.btn-primary.btn-block.add-to-cart:hover {
-//  background-color: @body-bg;
-//  color: @brand-primary;
-//  border: 1px solid @brand-primary;
-//}
-
-
 .input-group-btn .btn {
   border: 1px solid @gray-dark;
 }
@@ -64,8 +52,9 @@ a.navbar-brand:hover{
   border: 1px solid @body-bg;
 }
 
-// generic dropdown overrides (colors, add triangle caret pointer thing)
+// Dropdowns ==================================================================
 
+// caret arrow thing
 .dropdown-menu:before {
   border: 8px solid transparent;
   border-bottom-color: @gray-base;
@@ -94,7 +83,7 @@ a.navbar-brand:hover{
 }
 
 
-// a light version of the dropdown menu
+// a light version of the dropdown menu, maybe should become default?
 .dropdown-menu-inverse {
   background-color: #fff;
   font-family: @font-family-base;
