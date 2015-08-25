@@ -6806,10 +6806,6 @@ p {
   border-bottom: 1px dotted #f1f1f1;
   text-decoration: none;
 }
-table,
-.table {
-  color: #bdbdc1;
-}
 table a:not(.btn),
 .table a:not(.btn) {
   color: #fff;
@@ -6819,25 +6815,11 @@ table .dropdown-menu a,
 .table .dropdown-menu a {
   text-decoration: none;
 }
-table .text-muted,
-.table .text-muted {
-  color: #bdbdc1;
-}
 .table {
-  width: 100%;
-  max-width: 100%;
   margin-bottom: 10px;
 }
 .table-responsive > .table {
   background-color: #222228;
-}
-.table > thead > tr > th,
-.table > tbody > tr > th,
-.table > tfoot > tr > th,
-.table > thead > tr > td,
-.table > tbody > tr > td,
-.table > tfoot > tr > td {
-  padding: 10px;
 }
 .table > thead > tr > th {
   color: #66656c;
