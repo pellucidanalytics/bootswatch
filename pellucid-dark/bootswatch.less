@@ -451,12 +451,13 @@ select[size] {
 [data-schematype="array"] .table > thead > tr > td,
 [data-schematype="array"] .table > tbody > tr > td,
 [data-schematype="array"] .table > tfoot > tr > td {
-  padding: 5px 10px 0px 0px;
+  padding: 0px 15px 0px 0px;
   border-top: none;
 }
 
 [data-schematype="array"] [title="Delete Last Comp"],
 [data-schematype="array"] [title="Delete Last Group"],
+[data-schematype="array"] [title="Delete Last item"],
 [data-schematype="array"] [title="Delete All"] {
   display: none;
 }
@@ -466,17 +467,22 @@ select[size] {
   font-size: 14px;
   margin-bottom: 0px;
 }
+
 .col-md-12.container-comps {
   margin: 20px 0px;
 }
 
 // Comps groups madness
 
-.container-compsGroups {
+[data-schemaid="enititiesCompsListGrouped"] {
+
+  [data-schemapath^="root.entities.compsGroups"] button.btn.btn-default.json-editor-btn-add {
+    margin: 0px;
+  }
 
   [data-schemapath^="root.entities.compsGroups"] {
     button.btn.btn-default.json-editor-btn-add {
-      margin-left: 15px;
+      margin: 15px;
     }
   }
 
@@ -543,6 +549,12 @@ select[size] {
     border-radius: 2px;
   }
 
+  @media screen and (min-width: 1200px) {
+    [data-schematype="array"] {
+      width: 100%;
+    }
+  }
+
   .form-group {
     margin-bottom: 0px;
   }
@@ -550,6 +562,114 @@ select[size] {
   [data-schematype="array"] thead {
   display: none;
   margin-top: 10px;
+  }
+}
+
+
+// Comps groups with title
+
+.col-md-12.container-compsGroups > h3 > span {
+  font-size: 14px;
+  color: @white;
+  line-height: 20px;
+  text-transform: capitalize;
+  letter-spacing: 0px;
+}
+
+[data-schemaid="enititiesCompsListGroupedTitle"] > div > div > div {
+  border: 1px solid @gray-dark2;
+  border-radius: 2px;
+  margin-bottom: 5px;
+  padding: 15px;
+}
+
+[data-schemaid="enititiesCompsListGroupedTitle"] {
+
+  @media screen and (min-width: 1200px) {
+    [data-schematype="array"] .table > thead > tr > th,
+    [data-schematype="array"] .table > tbody > tr > th,
+    [data-schematype="array"] .table > tfoot > tr > th,
+    [data-schematype="array"] .table > thead > tr > td,
+    [data-schematype="array"] .table > tbody > tr > td,
+    [data-schematype="array"] .table > tfoot > tr > td {
+      padding: 0px 15px 0px 0px;
+      border-top: none;
+      width: 350px;
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    [data-schematype="array"] .table > thead > tr > th,
+    [data-schematype="array"] .table > tbody > tr > th,
+    [data-schematype="array"] .table > tfoot > tr > th,
+    [data-schematype="array"] .table > thead > tr > td,
+    [data-schematype="array"] .table > tbody > tr > td,
+    [data-schematype="array"] .table > tfoot > tr > td {
+      padding: 0px 15px 0px 0px;
+      border-top: none;
+      width: 220px;
+    }
+  }
+
+  @media screen and (max-width: 760px) {
+    [data-schematype="array"] .table > thead > tr > th,
+    [data-schematype="array"] .table > tbody > tr > th,
+    [data-schematype="array"] .table > tfoot > tr > th,
+    [data-schematype="array"] .table > thead > tr > td,
+    [data-schematype="array"] .table > tbody > tr > td,
+    [data-schematype="array"] .table > tfoot > tr > td {
+      padding: 0px 15px 0px 0px;
+      border-top: none;
+      width: 140px;
+    }
+  }
+
+  [data-schemapath^="root.entities.compsGroups"] > h3 > div > button {
+    background: none;
+    height: 30px;
+    vertical-align: middle;
+    border: 0px;
+    font-size: 12px;
+    color: @gray;
+  }
+
+  [data-schemapath^="root.entities.compsGroups"] > h3 > .btn-group {
+    float: right;
+  }
+
+  button.btn.btn-default.json-editor-btn-delete.delete {
+    [title~="Delete group"] {
+      color: red;
+    }
+  }
+
+  [data-schemaid="entitiesCompGroupItemsTitle"] {
+    border: none;
+    margin: 0px;
+  }
+
+  [data-schemapath^="root.entities.compsGroups"] button.btn.btn-default.json-editor-btn-add {
+    margin: 0px;
+  }
+
+  .col-md-12.container-compsGroupItems {
+    padding: 0px 15px 0px 15px;
+  }
+
+  .container-compsGroups [data-schematype="array"] table.table.table-bordered{
+    margin-top: 0px;
+  }
+
+  [data-schemaid="entitiesCompGroupItemsTitle"] > h3 {
+    line-height: 20px;
+  }
+
+  button.btn.btn-default.json-editor-btn-add {
+    margin: 10px 0px;
+  }
+
+  table.table.table-bordered {
+    background-color: transparent;
   }
 }
 
